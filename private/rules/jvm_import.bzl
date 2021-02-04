@@ -49,7 +49,7 @@ def _jvm_import_impl(ctx):
             compile_jar = outjar,
             output_jar = outjar,
             source_jar = ctx.file.srcjar,
-            deps = [
+            exports = [
                 dep[JavaInfo]
                 for dep in ctx.attr.deps
                 if JavaInfo in dep
